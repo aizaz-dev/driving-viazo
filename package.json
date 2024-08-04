@@ -1,0 +1,29 @@
+{
+  "name": "driving-marketing-msateeshh",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "^14.2.5",
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^3.52.4",
+    "next": "14.2.5",
+    "next-sanity": "^9.4.3",
+    "next-sanity-image": "^6.1.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "sanity": "^3.52.4",
+    "styled-components": "^6.1.12"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
