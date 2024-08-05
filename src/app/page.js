@@ -6,7 +6,7 @@ import Feature from "@/components/Feature/Feature";
 import Drivers from "@/components/Drivers/Drivers";
 import Passengers from "@/components/Passengers/Passengers";
 import Footer from "@/components/Footer/Footer";
-import { useNextSanityImage } from 'next-sanity-image';
+import { useNextSanityImage } from "next-sanity-image";
 
 const HomePage = async () => {
   const pageData = await client.fetch(
@@ -17,9 +17,10 @@ const HomePage = async () => {
     <div>
       <Header />
       {pageData.sections.map((section, index) => {
+        console.log("pages: ", pageData);
+
         switch (section._type) {
           case "hero":
-            console.log(section);
             return (
               <Hero
                 key={index}
@@ -33,16 +34,23 @@ const HomePage = async () => {
                 lightAlt={section.lightBackgroundImage.alt}
               />
             );
+
           case "features":
             return (
-              <Feature
-                key={index}
-                title={section.title}
-                featuresList={section.featuresList}
-              />
+              <Feature key={index} title={section.title} tabs={section.tabs} />
             );
           case "drivers":
-            return <Drivers key={index} />;
+            console.log("section drivers: ", section);
+            return (
+              <Drivers
+                key={index}
+                title={section.title}
+                driverFeatures={section.driverFeatures}
+                description={section.description}
+                image={urlFor(section.image).url()}
+                imageAlt={section.image.alt}
+              />
+            );
           case "passengers":
             return <Passengers key={index} />;
           default:
