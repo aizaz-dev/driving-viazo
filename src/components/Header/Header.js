@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -14,13 +15,13 @@ const Header = () => {
       <nav className="relative max-w-7xl w-full flex flex-wrap md:grid md:grid-cols-12 basis-full items-center px-4  mx-auto">
         <div className="md:col-span-3">
           {/* Logo */}
-          <Link href="/templates/creative-agency/index.html">
-            <span
-              className="flex-none rounded-xl text-white text-xl inline-block font-semibold focus:outline-none focus:opacity-80"
-              aria-label="Preline"
-            >
-              LOGO
-            </span>
+          <Link href="/">
+            <Image
+              src="/logo/brand_color_white.svg"
+              alt="logo"
+              width={100}
+              height={100}
+            />
           </Link>
           {/* End Logo */}
         </div>
@@ -43,7 +44,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               type="button"
-              className="hs-collapse-toggle size-[38px] flex justify-center items-center text-sm font-semibold rounded-xl border border-gray-200 text-black hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+              className="hs-collapse-toggle size-[38px] flex justify-center items-center text-sm font-semibold rounded-xl border border-gray-200 text-white  focus:outline-none  disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
               onClick={toggleNav}
               aria-expanded={isNavOpen}
               aria-controls="hs-navbar-hcail"
@@ -95,41 +96,28 @@ const Header = () => {
         >
           <div className="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:justify-center md:items-center md:gap-y-0 md:gap-x-7 md:mt-0">
             <div>
-              <Link href="#">
+              <Link href="/">
                 <span
                   className="relative inline-block text-white focus:outline-none before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 "
                   aria-current="page"
                 >
-                  Work
+                  Home
                 </span>
               </Link>
             </div>
             <div>
-              <Link href="#">
-                <span className="inline-block text-white">
-                  Services
-                </span>
+              <Link href="/drivers">
+                <span className="inline-block text-white">Drivers</span>
               </Link>
             </div>
             <div>
-              <Link href="#">
-                <span className="inline-block text-white">
-                  About
-                </span>
+              <Link href="/riders">
+                <span className="inline-block text-white">Riders</span>
               </Link>
             </div>
             <div>
-              <Link href="#">
-                <span className="inline-block text-white">
-                  Careers
-                </span>
-              </Link>
-            </div>
-            <div>
-              <Link href="#">
-                <span className="inline-block text-white">
-                  Blog
-                </span>
+              <Link href="/contact">
+                <span className="inline-block text-white">Contact</span>
               </Link>
             </div>
           </div>

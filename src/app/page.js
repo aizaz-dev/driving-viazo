@@ -1,12 +1,9 @@
 import React from "react";
 import { client, urlFor } from "@/sanity/lib/client";
-import Header from "@/components/Header/Header";
-import Hero from "@/components/Hero/Hero";
-import Feature from "@/components/Feature/Feature";
-import Drivers from "@/components/Drivers/Drivers";
-import Passengers from "@/components/Passengers/Passengers";
-import Footer from "@/components/Footer/Footer";
-import { useNextSanityImage } from "next-sanity-image";
+import Hero from "@/components/Home/Hero/Hero";
+import Feature from "@/components/Home/Feature/Feature";
+import Drivers from "@/components/Home/Drivers/Drivers";
+import Passengers from "@/components/Home/Passengers/Passengers";
 
 const HomePage = async () => {
   const pageData = await client.fetch(
@@ -15,10 +12,7 @@ const HomePage = async () => {
 
   return (
     <div>
-      <Header />
       {pageData.sections.map((section, index) => {
-        console.log("pages: ", pageData);
-
         switch (section._type) {
           case "hero":
             return (
@@ -40,7 +34,6 @@ const HomePage = async () => {
               <Feature key={index} title={section.title} tabs={section.tabs} />
             );
           case "drivers":
-            console.log("section drivers: ", section);
             return (
               <Drivers
                 key={index}
@@ -57,7 +50,6 @@ const HomePage = async () => {
             return null;
         }
       })}
-      <Footer />
     </div>
   );
 };
