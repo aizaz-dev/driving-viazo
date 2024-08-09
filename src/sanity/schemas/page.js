@@ -17,7 +17,13 @@ const page = {
       name: "sections",
       title: "Sections",
       type: "array",
-      of: [{ type: "hero" }, { type: "features" }, { type: "drivers" }],
+      of: [
+        { type: "hero" },
+        { type: "features" },
+        { type: "drivers" },
+        { type: "driversHero" },
+        { type: "pricingSection" },
+      ],
     },
   ],
 };

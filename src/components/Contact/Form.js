@@ -103,7 +103,6 @@ const Form = () => {
                   ></textarea>
                 </div>
               </div>
-
               <div className="mt-6 grid">
                 <button
                   type="submit"
