@@ -42,8 +42,8 @@ const Feature = ({ title, tabs }) => {
                     >
                       <span className="flex gap-x-6">
                         <Image
-                          width={100}
-                          height={100}
+                          width={30}
+                          height={30}
                           alt={iconAlt}
                           src={iconImage}
                         />

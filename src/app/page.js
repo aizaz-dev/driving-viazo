@@ -13,6 +13,7 @@ const HomePage = async () => {
   return (
     <div>
       {pageData.sections.map((section, index) => {
+        console.log("pages :", pageData);
         switch (section._type) {
           case "hero":
             return (
@@ -44,8 +45,18 @@ const HomePage = async () => {
                 imageAlt={section.image.alt}
               />
             );
-          case "passengers":
-            return <Passengers key={index} />;
+          case "drivers":
+            console.log("Passengers", section);
+            return (
+              <Passengers
+                key={index}
+                title={section.title}
+                driverFeatures={section.driverFeatures}
+                description={section.description}
+                image={urlFor(section.image).url()}
+                imageAlt={section.image.alt}
+              />
+            );
           default:
             return null;
         }

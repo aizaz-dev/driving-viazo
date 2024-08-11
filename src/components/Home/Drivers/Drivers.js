@@ -1,17 +1,12 @@
 import React from "react";
 
-const Drivers = ({ title, driverFeatures, description }) => {
-  
+const Drivers = ({ title, driverFeatures, description, image, imageAlt }) => {
   return (
     <div>
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         <div className="md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
           <div>
-            <img
-              className="rounded-xl"
-              src="https://images.unsplash.com/photo-1648737963503-1a26da876aca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&h=900&q=80"
-              alt="Features Image"
-            />
+            <img className="rounded-xl" src={image} alt={imageAlt} />
           </div>
 
           <div className="mt-5 sm:mt-10 lg:mt-0">

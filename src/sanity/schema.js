@@ -5,6 +5,8 @@ import drivers from "./schemas/drivers";
 import driversHero from "./schemas/driversHero";
 import pricingPlan from "./schemas/pricingPlan";
 import pricingSection from "./schemas/pricingSection";
+import faqItem from "./schemas/faqItem";
+import faqSection from "./schemas/faqSection";
 
 export const schema = {
   types: [
@@ -15,5 +17,7 @@ export const schema = {
     driversHero,
     pricingPlan,
     pricingSection,
+    faqItem,
+    faqSection,
   ],
 };

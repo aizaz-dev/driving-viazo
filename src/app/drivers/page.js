@@ -35,14 +35,23 @@ const page = async () => {
                 pricingPlans={section.plans}
               />
             );
+          case "features":
+            return (
+              <Features key={index} title={section.title} tabs={section.tabs} />
+            );
+          case "faqSection":
+            return (
+              <Faq
+                key={index}
+                title={section.title}
+                description={section.description}
+                faqs={section.faqs}
+              />
+            );
           default:
             return null;
         }
       })}
-
-      {/* <Pricing /> */}
-      <Features />
-      <Faq />
     </div>
   );
 };
