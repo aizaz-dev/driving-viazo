@@ -11,13 +11,13 @@ const Header = () => {
   };
 
   return (
-    <header className="flex flex-wrap bg-main-700 md:justify-start md:flex-nowrap z-50 w-full py-7">
+    <header className="flex flex-wrap bg-white shadow-md md:justify-start md:flex-nowrap z-50 w-full py-7">
       <nav className="relative max-w-7xl w-full flex flex-wrap md:grid md:grid-cols-12 basis-full items-center px-4  mx-auto">
         <div className="md:col-span-3">
           {/* Logo */}
           <Link href="/">
             <Image
-              src="/logo/brand_color_white.svg"
+              src="/logo/brand_color1.svg"
               alt="logo"
               width={100}
               height={100}
@@ -98,7 +98,7 @@ const Header = () => {
             <div>
               <Link href="/">
                 <span
-                  className="relative inline-block text-white focus:outline-none before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 "
+                  className="relative inline-block text-black font-medium focus:outline-none before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 "
                   aria-current="page"
                 >
                   Home
@@ -107,17 +107,23 @@ const Header = () => {
             </div>
             <div>
               <Link href="/drivers">
-                <span className="inline-block text-white">Drivers</span>
+                <span className="inline-block text-black font-medium">
+                  Drivers
+                </span>
               </Link>
             </div>
             <div>
               <Link href="/riders">
-                <span className="inline-block text-white">Riders</span>
+                <span className="inline-block text-black font-medium">
+                  Riders
+                </span>
               </Link>
             </div>
             <div>
               <Link href="/contact">
-                <span className="inline-block text-white">Contact</span>
+                <span className="inline-block text-black font-medium">
+                  Contact
+                </span>
               </Link>
             </div>
           </div>

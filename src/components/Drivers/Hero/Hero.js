@@ -1,4 +1,5 @@
 import { urlFor } from "@/sanity/lib/client";
+import Image from "next/image";
 import React from "react";
 
 const Hero = ({ title, description, trustedBy, heroImage, heroAlt }) => {
@@ -25,9 +26,11 @@ const Hero = ({ title, description, trustedBy, heroImage, heroAlt }) => {
                   const imageAlt = obj.alt;
 
                   return (
-                    <img
+                    <Image
                       key={index}
-                      className="h-8"
+                      height={50}
+                      width={100}
+                      className="h-8 w-auto "
                       src={image}
                       alt={imageAlt}
                     />
@@ -38,7 +41,7 @@ const Hero = ({ title, description, trustedBy, heroImage, heroAlt }) => {
           </div>
 
           <div className="lg:col-span-4 mt-10 lg:mt-0">
-            <img className="w-full rounded-xl" src={heroImage} alt={heroAlt} />
+            <img className=" rounded-xl" src={heroImage} alt={heroAlt} />
           </div>
         </div>
       </div>
