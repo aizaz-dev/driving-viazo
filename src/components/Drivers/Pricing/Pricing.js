@@ -32,7 +32,7 @@ const pricingPlans = [
 const Pricing = ({ title, description, pricingPlans }) => {
   return (
     <div className="py-10">
-      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto rounded-2xl bg-primary-50">
         <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
           <h2 className="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">
             {title}
@@ -42,7 +42,7 @@ const Pricing = ({ title, description, pricingPlans }) => {
           </p>
         </div>
 
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:items-center">
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:items-center">
           {pricingPlans.map((plan, index) => (
             <div
               key={index}

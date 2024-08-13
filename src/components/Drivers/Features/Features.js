@@ -35,7 +35,7 @@ const Features = ({ title, tabs }) => {
                 role="tab"
               >
                 {/* {tab.icon} */}
-                <img src={image} alt={heroAlt} />
+                <img src={image} alt={heroAlt} className="size-16" />
                 <span className="mt-5">
                   <span className="hs-tab-active:text-blue-600 block font-semibold text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
                     {tab.tabTitle}

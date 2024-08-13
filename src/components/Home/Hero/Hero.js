@@ -16,7 +16,7 @@ const Hero = async ({
   return (
     <div>
       <div
-        className={`relative min-h-[90vh] overflow-hidden before:absolute before:top-0 before:start-1/2  dark:before:bg-[url('https://preline.co/assets/svg/examples-dark/squared-bg-element.svg')] before:bg-no-repeat before:bg-top before:size-full before:-z-[1] before:transform before:-translate-x-1/2`}
+        className={`relative min-h-[80vh] overflow-hidden before:absolute before:top-0 before:start-1/2  dark:before:bg-[url('https://preline.co/assets/svg/examples-dark/squared-bg-element.svg')] before:bg-no-repeat before:bg-top before:size-full before:-z-[1] before:transform before:-translate-x-1/2`}
       >
         <Image
           className=" absolute z-0 block dark:hidden  top-0 right-0 w-full h-full left-0 bottom-0"
