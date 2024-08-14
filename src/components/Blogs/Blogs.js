@@ -1,3 +1,4 @@
+import { urlFor } from "@/sanity/lib/client";
 import Link from "next/link";
 import React from "react";
 
@@ -20,6 +21,7 @@ const Blogs = ({ title, blogs }) => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogs.map((blog, index) => {
             console.log("maped blog", blog);
+            const heroImage = urlFor(blog.image).url();
             return (
               <Link
                 key={index}
@@ -27,11 +29,11 @@ const Blogs = ({ title, blogs }) => {
                 href={blog.slug.current}
               >
                 <div className="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
-                  {/* <img
-                  className="size-full absolute top-0 start-0 object-cover group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl"
-                  src={insight.image}
-                  alt={insight.altText}
-                /> */}
+                  <img
+                    className="size-full absolute top-0 start-0 object-cover group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl"
+                    src={heroImage}
+                    alt={blog.altText}
+                  />
                   {blog.sponsored && (
                     <span className="absolute top-0 end-0 rounded-se-xl rounded-es-xl text-xs font-medium bg-gray-800 text-white py-1.5 px-3 dark:bg-neutral-900">
                       Sponsored
