@@ -7,6 +7,8 @@ import pricingPlan from "./schemas/pricingPlan";
 import pricingSection from "./schemas/pricingSection";
 import faqItem from "./schemas/faqItem";
 import faqSection from "./schemas/faqSection";
+import blogSection from "./schemas/blogSection";
+import blogPost from "./schemas/blogPost";
 
 export const schema = {
   types: [
@@ -19,5 +21,7 @@ export const schema = {
     pricingSection,
     faqItem,
     faqSection,
+    blogPost,
+    blogSection,
   ],
 };

@@ -23,8 +23,8 @@ const page = {
         { type: "drivers" },
         { type: "driversHero" },
         { type: "pricingSection" },
-        
         { type: "faqSection" },
+        { type: "blogSection" },
       ],
     },
   ],
