@@ -4,7 +4,7 @@ import React from "react";
 
 const Hero = ({ title, description, trustedBy, heroImage, heroAlt }) => {
   return (
-    <div className="py-[40px] min-h-[calc(100vh-100px)] flex items-center">
+    <div className="py-[40px] min-h-[calc(100vh-300px)] flex items-center">
       <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
           <div className="lg:col-span-3">
@@ -17,7 +17,7 @@ const Hero = ({ title, description, trustedBy, heroImage, heroAlt }) => {
 
             <div className="mt-6 lg:mt-12">
               <span className="text-xs font-medium text-gray-800 uppercase dark:text-neutral-200">
-                Trusted by:
+                Descarga:
               </span>
 
               <div className="mt-4 flex gap-x-8">
