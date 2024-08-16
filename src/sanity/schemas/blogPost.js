@@ -36,6 +36,18 @@ const blogPost = {
       initialValue: "Read more",
     },
     { name: "linkHref", title: "Link Href", type: "url" },
+    {
+      name: "body",
+      title: "Body",
+      type: "array",
+      of: [
+        { type: "block" },
+        {
+          type: "image",
+          fields: [{ type: "text", name: "alt", title: "Alt" }],
+        },
+      ],
+    },
   ],
 };
 

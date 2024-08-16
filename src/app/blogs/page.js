@@ -10,6 +10,7 @@ const page = async () => {
       sections[]{
         _type == "blogSection" => {
           title,
+          description,
           _type,
           blogs[]->{
             title,
@@ -33,16 +34,18 @@ const page = async () => {
 
   const pageData = pageDataArray; // Since we already fetch the first item with `[0]`
 
-  console.log("pageData: ", pageData);
-
   return (
     <div>
       {pageData.sections.map((section, index) => {
-        console.log("section is here: ",section._type, section.blogs);
         switch (section._type) {
           case "blogSection":
             return (
-              <Blogs key={index} title={section.title} blogs={section.blogs} />
+              <Blogs
+                key={index}
+                description={section.description}
+                title={section.title}
+                blogs={section.blogs}
+              />
             );
           default:
             return null;
