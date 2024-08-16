@@ -5,10 +5,6 @@ const Drivers = ({ title, driverFeatures, description, image, imageAlt }) => {
     <div>
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         <div className="md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
-          <div>
-            <img className="rounded-xl" src={image} alt={imageAlt} />
-          </div>
-
           <div className="mt-5 sm:mt-10 lg:mt-0">
             <div className="space-y-6 sm:space-y-8">
               <div className="space-y-2 md:space-y-4">
@@ -48,6 +44,9 @@ const Drivers = ({ title, driverFeatures, description, image, imageAlt }) => {
                 ))}
               </ul>
             </div>
+          </div>
+          <div>
+            <img className="rounded-xl" src={image} alt={imageAlt} />
           </div>
         </div>
       </div>
