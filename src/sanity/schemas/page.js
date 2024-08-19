@@ -25,6 +25,7 @@ const page = {
         { type: "pricingSection" },
         { type: "faqSection" },
         { type: "blogSection" },
+        {type:"footer"}
       ],
     },
   ],

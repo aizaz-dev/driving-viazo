@@ -9,6 +9,7 @@ import faqItem from "./schemas/faqItem";
 import faqSection from "./schemas/faqSection";
 import blogSection from "./schemas/blogSection";
 import blogPost from "./schemas/blogPost";
+import footer from "./schemas/footer";
 
 export const schema = {
   types: [
@@ -23,5 +24,6 @@ export const schema = {
     faqSection,
     blogPost,
     blogSection,
+    footer,
   ],
 };
