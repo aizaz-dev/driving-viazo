@@ -21,7 +21,7 @@ const page = async () => {
                 key={index}
                 title={section.title}
                 description={section.description}
-                trustedBy={section.trustedBy}
+                trustedBy={section.trustedBy} // This passes the array of objects with image and link fields
                 heroImage={urlFor(section.heroImage).url()}
                 heroAlt={section.heroImage.alt}
               />

@@ -19,12 +19,24 @@ const driversHero = {
       type: "array",
       of: [
         {
-          type: "image",
-          options: { hotspot: true },
+          type: "object",
           fields: [
             {
-              name: "alt",
-              title: "Alt Text",
+              name: "image",
+              title: "Image",
+              type: "image",
+              options: { hotspot: true },
+              fields: [
+                {
+                  name: "alt",
+                  title: "Alt Text",
+                  type: "string",
+                },
+              ],
+            },
+            {
+              name: "link",
+              title: "Link",
               type: "string",
             },
           ],

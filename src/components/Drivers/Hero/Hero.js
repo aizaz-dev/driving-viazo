@@ -1,5 +1,6 @@
 import { urlFor } from "@/sanity/lib/client";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Hero = ({ title, description, trustedBy, heroImage, heroAlt }) => {
@@ -22,18 +23,23 @@ const Hero = ({ title, description, trustedBy, heroImage, heroAlt }) => {
 
               <div className="mt-4 flex gap-x-8">
                 {trustedBy.map((obj, index) => {
-                  const image = urlFor(obj).url();
-                  const imageAlt = obj.alt;
+                  const imageUrl = urlFor(obj.image).url(); // Fix here
+                  const imageAlt = obj.image.alt;
 
                   return (
-                    <Image
+                    <Link
                       key={index}
-                      height={50}
-                      width={100}
-                      className="h-8 w-auto "
-                      src={image}
-                      alt={imageAlt}
-                    />
+                      target="_blank"
+                      href={obj.link} // Assuming obj.link contains the correct link
+                    >
+                      <Image
+                        height={50}
+                        width={100}
+                        className="h-8 w-auto"
+                        src={imageUrl}
+                        alt={imageAlt}
+                      />
+                    </Link>
                   );
                 })}
               </div>
@@ -41,7 +47,7 @@ const Hero = ({ title, description, trustedBy, heroImage, heroAlt }) => {
           </div>
 
           <div className="lg:col-span-4 mt-10 lg:mt-0">
-            <img className=" rounded-xl" src={heroImage} alt={heroAlt} />
+            <img className="rounded-xl" src={heroImage} alt={heroAlt} />
           </div>
         </div>
       </div>
