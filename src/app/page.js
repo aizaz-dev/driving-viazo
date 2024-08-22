@@ -23,10 +23,11 @@ const HomePage = async () => {
                 description={section.description}
                 buttonText={section.buttonText}
                 buttonLink={section.buttonLink}
-                darkbg={urlFor(section.darkBackgroundImage).url()}
-                darkAlt={section.darkBackgroundImage.alt}
-                lightbg={urlFor(section.lightBackgroundImage).url()}
-                lightAlt={section.lightBackgroundImage.alt}
+                buttonText2={section.buttonText2}
+                buttonLink2={section.buttonLink2}
+                image={urlFor(section.image).url()}
+                imageAlt={section.image.alt}
+               
               />
             );
 

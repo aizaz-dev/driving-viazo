@@ -1,3 +1,4 @@
+import CheckedList from "@/components/Drivers/CheckedList/CheckedList";
 import Faq from "@/components/Drivers/Faq/Faq";
 import Features from "@/components/Drivers/Features/Features";
 import Hero from "@/components/Drivers/Hero/Hero";
@@ -52,6 +53,7 @@ const page = async () => {
             return null;
         }
       })}
+      <CheckedList />
     </div>
   );
 };
