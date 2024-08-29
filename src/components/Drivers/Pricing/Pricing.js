@@ -34,10 +34,10 @@ const Pricing = ({ title, description, pricingPlans }) => {
     <div className="py-10">
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto rounded-2xl bg-main-50">
         <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
-          <h2 className="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">
+          <h2 className="text-2xl font-bold md:text-4xl md:leading-tight ">
             {title}
           </h2>
-          <p className="mt-1 text-gray-600 dark:text-neutral-400">
+          <p className="mt-1 text-gray-600 ">
             {description}
           </p>
         </div>
@@ -50,22 +50,22 @@ const Pricing = ({ title, description, pricingPlans }) => {
                 plan.popular
                   ? "border-2 border-blue-600 shadow-xl"
                   : "border-gray-200"
-              } text-center rounded-xl p-8 dark:border-neutral-800`}
+              } text-center rounded-xl p-8 `}
             >
               {plan.popular && (
                 <p className="mb-3">
-                  <span className="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg text-xs uppercase font-semibold bg-blue-100 text-blue-800 dark:bg-blue-600 dark:text-white">
+                  <span className="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg text-xs uppercase font-semibold bg-blue-100 text-blue-800  ">
                     Most popular
                   </span>
                 </p>
               )}
-              <h4 className="font-medium text-lg text-gray-800 dark:text-neutral-200">
+              <h4 className="font-medium text-lg text-gray-800 ">
                 {plan.title}
               </h4>
-              <span className="mt-5 font-bold text-5xl text-gray-800 dark:text-neutral-200">
+              <span className="mt-5 font-bold text-5xl text-gray-800 ">
                 {plan.price}
               </span>
-              <p className="mt-2 text-sm text-gray-500 dark:text-neutral-500">
+              <p className="mt-2 text-sm text-gray-500 ">
                 {plan.description}
               </p>
 
@@ -73,7 +73,7 @@ const Pricing = ({ title, description, pricingPlans }) => {
                 {plan.features.map((feature, idx) => (
                   <li key={idx} className="flex gap-x-2">
                     <svg
-                      className="shrink-0 mt-0.5 size-4 text-blue-600 dark:text-blue-500"
+                      className="shrink-0 mt-0.5 size-4 text-blue-600 "
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
@@ -86,7 +86,7 @@ const Pricing = ({ title, description, pricingPlans }) => {
                     >
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    <span className="text-gray-800 dark:text-neutral-400">
+                    <span className="text-gray-800 ">
                       {feature}
                     </span>
                   </li>
@@ -97,7 +97,7 @@ const Pricing = ({ title, description, pricingPlans }) => {
                 className={`mt-5 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg ${
                   plan.popular
                     ? "border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700"
-                    : "border border-gray-200 bg-main-600 text-white shadow-sm hover:bg-main-500 focus:outline-none focus:bg-main-500 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+                    : "border border-gray-200 bg-main-600 text-white shadow-sm hover:bg-main-500 focus:outline-none focus:bg-main-500 "
                 }`}
                 href="#"
               >

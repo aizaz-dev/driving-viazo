@@ -13,7 +13,7 @@ const HomePage = async () => {
   return (
     <div>
       {pageData.sections.map((section, index) => {
-        console.log("pages :", pageData);
+       
         switch (section._type) {
           case "hero":
             return (
@@ -47,7 +47,7 @@ const HomePage = async () => {
               />
             );
           case "drivers":
-            console.log("Passengers", section);
+         
             return (
               <Passengers
                 key={index}

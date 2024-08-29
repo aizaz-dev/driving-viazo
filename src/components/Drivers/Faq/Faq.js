@@ -51,12 +51,10 @@ const Faq = ({ title, description, faqs }) => {
     <div className="py-10">
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         <div className=" mx-auto text-center mb-10 lg:mb-14">
-          <h2 className="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">
+          <h2 className="text-2xl font-bold md:text-4xl md:leading-tight ">
             {title}
           </h2>
-          <p className="mt-1 text-gray-600 dark:text-neutral-400">
-            {description}
-          </p>
+          <p className="mt-1 text-gray-600 ">{description}</p>
         </div>
 
         <div className=" mx-auto">
@@ -64,7 +62,7 @@ const Faq = ({ title, description, faqs }) => {
             {faqs.map((faq) => (
               <div
                 key={faq._key}
-                className={`hs-accordion ${openItemId === faq._key ? "hs-accordion-active:bg-gray-100 bg-accent-500 dark:hs-accordion-active:bg-white/10" : ""} rounded-xl p-6`}
+                className={`hs-accordion ${openItemId === faq._key ? "hs-accordion-active:bg-gray-100 bg-accent-500" : ""} rounded-xl p-6`}
                 id={`hs-basic-with-title-and-arrow-stretched-heading-${faq._key}`}
               >
                 <button

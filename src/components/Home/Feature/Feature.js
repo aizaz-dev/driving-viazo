@@ -15,7 +15,7 @@ const Feature = ({ title, tabs }) => {
         <div className="relative p-6 md:p-16">
           <div className="relative z-10 lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center">
             <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-8 lg:order-2">
-              <h2 className="text-2xl text-gray-800 font-bold sm:text-3xl dark:text-neutral-200">
+              <h2 className="text-2xl text-gray-800 font-bold sm:text-3xl ">
                 {title}
               </h2>
 
@@ -32,7 +32,7 @@ const Feature = ({ title, tabs }) => {
                     <button
                       key={tab._key}
                       type="button"
-                      className={`hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-start hover:bg-gray-200 focus:outline-none focus:bg-gray-200 p-4 md:p-5 rounded-xl dark:hs-tab-active:bg-neutral-700 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 ${
+                      className={`hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-start hover:bg-gray-200 focus:outline-none focus:bg-gray-200 p-4 md:p-5 rounded-xl  ${
                         activeTab === tab._key ? "active" : ""
                       }`}
                       id={`tabs-with-card-item-${index}`}
@@ -48,10 +48,10 @@ const Feature = ({ title, tabs }) => {
                           src={iconImage}
                         />
                         <span className="grow">
-                          <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
+                          <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800  ">
                             {tab.tabTitle}
                           </span>
-                          <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-neutral-200">
+                          <span className="block mt-1 text-gray-800 ">
                             {tab.tabDescription}
                           </span>
                         </span>
@@ -76,7 +76,7 @@ const Feature = ({ title, tabs }) => {
                       className={activeTab === tab._key ? "" : "hidden"}
                     >
                       <img
-                        className="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/20"
+                        className="shadow-xl shadow-gray-200 rounded-xl "
                         src={image}
                         alt={ImageAlt}
                       />
@@ -88,7 +88,7 @@ const Feature = ({ title, tabs }) => {
           </div>
 
           <div className="absolute inset-0 grid grid-cols-12 size-full">
-            <div className="col-span-full lg:col-span-7 lg:col-start-6 bg-gray-100 w-full h-5/6 rounded-xl sm:h-3/4 lg:h-full dark:bg-neutral-800"></div>
+            <div className="col-span-full lg:col-span-7 lg:col-start-6 bg-gray-100 w-full h-5/6 rounded-xl sm:h-3/4 lg:h-full "></div>
           </div>
         </div>
       </div>
@@ -116,7 +116,7 @@ export default Feature;
 //         <div className="relative p-6 md:p-16">
 //           <div className="relative z-10 lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center">
 //             <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-8 lg:order-2">
-//               <h2 className="text-2xl text-gray-800 font-bold sm:text-3xl dark:text-neutral-200">
+//               <h2 className="text-2xl text-gray-800 font-bold sm:text-3xl ">
 //                 {title}
 //               </h2>
 
@@ -128,7 +128,7 @@ export default Feature;
 //               >
 //                 <button
 //                   type="button"
-//                   className={`hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-start hover:bg-gray-200 focus:outline-none focus:bg-gray-200 p-4 md:p-5 rounded-xl dark:hs-tab-active:bg-neutral-700 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 ${
+//                   className={`hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-start hover:bg-gray-200 focus:outline-none focus:bg-gray-200 p-4 md:p-5 rounded-xl  ${
 //                     activeTab === "tabs-with-card-1" ? "active" : ""
 //                   }`}
 //                   id="tabs-with-card-item-1"
@@ -144,10 +144,10 @@ export default Feature;
 //                       src="./image.svg"
 //                     />
 //                     <span className="grow">
-//                       <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
+//                       <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800  ">
 //                         Advanced tools
 //                       </span>
-//                       <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-neutral-200">
+//                       <span className="block mt-1 text-gray-800 ">
 //                         Use Preline thoroughly thought and automated libraries
 //                         to manage your businesses.
 //                       </span>
@@ -157,7 +157,7 @@ export default Feature;
 
 //                 <button
 //                   type="button"
-//                   className={`hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-start hover:bg-gray-200 focus:outline-none focus:bg-gray-200 p-4 md:p-5 rounded-xl dark:hs-tab-active:bg-neutral-700 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 ${
+//                   className={`hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-start hover:bg-gray-200 focus:outline-none focus:bg-gray-200 p-4 md:p-5 rounded-xl  ${
 //                     activeTab === "tabs-with-card-2" ? "active" : ""
 //                   }`}
 //                   id="tabs-with-card-item-2"
@@ -167,7 +167,7 @@ export default Feature;
 //                 >
 //                   <span className="flex gap-x-6">
 //                     <svg
-//                       className="shrink-0 mt-2 size-6 md:size-7 hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-neutral-200"
+//                       className="shrink-0 mt-2 size-6 md:size-7 hs-tab-active:text-blue-600 text-gray-800  "
 //                       xmlns="http://www.w3.org/2000/svg"
 //                       width="24"
 //                       height="24"
@@ -182,10 +182,10 @@ export default Feature;
 //                       <path d="M3.34 19a10 10 0 1 1 17.32 0" />
 //                     </svg>
 //                     <span className="grow">
-//                       <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
+//                       <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800  ">
 //                         Smart dashboards
 //                       </span>
-//                       <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-neutral-200">
+//                       <span className="block mt-1 text-gray-800 ">
 //                         Quickly Preline sample components, copy-paste codes, and
 //                         start right off.
 //                       </span>
@@ -195,7 +195,7 @@ export default Feature;
 
 //                 <button
 //                   type="button"
-//                   className={`hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-start hover:bg-gray-200 focus:outline-none focus:bg-gray-200 p-4 md:p-5 rounded-xl dark:hs-tab-active:bg-neutral-700 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 ${
+//                   className={`hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-start hover:bg-gray-200 focus:outline-none focus:bg-gray-200 p-4 md:p-5 rounded-xl  ${
 //                     activeTab === "tabs-with-card-3" ? "active" : ""
 //                   }`}
 //                   id="tabs-with-card-item-3"
@@ -205,7 +205,7 @@ export default Feature;
 //                 >
 //                   <span className="flex gap-x-6">
 //                     <svg
-//                       className="shrink-0 mt-2 size-6 md:size-7 hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-neutral-200"
+//                       className="shrink-0 mt-2 size-6 md:size-7 hs-tab-active:text-blue-600 text-gray-800  "
 //                       xmlns="http://www.w3.org/2000/svg"
 //                       width="24"
 //                       height="24"
@@ -223,10 +223,10 @@ export default Feature;
 //                       <path d="M17 19h4" />
 //                     </svg>
 //                     <span className="grow">
-//                       <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
+//                       <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800  ">
 //                         Powerful features
 //                       </span>
-//                       <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-neutral-200">
+//                       <span className="block mt-1 text-gray-800 ">
 //                         Reduce time and effort on building modern look design
 //                         with Preline only.
 //                       </span>
@@ -246,7 +246,7 @@ export default Feature;
 //                     className={activeTab === "tabs-with-card-1" ? "" : "hidden"}
 //                   >
 //                     <img
-//                       className="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/20"
+//                       className="shadow-xl shadow-gray-200 rounded-xl "
 //                       src="https://images.unsplash.com/photo-1605629921711-2f6b00c6bbf4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&h=720&q=80"
 //                       alt="Features Image"
 //                     />
@@ -259,7 +259,7 @@ export default Feature;
 //                     className={activeTab === "tabs-with-card-2" ? "" : "hidden"}
 //                   >
 //                     <img
-//                       className="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/20"
+//                       className="shadow-xl shadow-gray-200 rounded-xl "
 //                       src="https://images.unsplash.com/photo-1665686306574-1ace09918530?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&h=720&q=80"
 //                       alt="Features Image"
 //                     />
@@ -272,7 +272,7 @@ export default Feature;
 //                     className={activeTab === "tabs-with-card-3" ? "" : "hidden"}
 //                   >
 //                     <img
-//                       className="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/20"
+//                       className="shadow-xl shadow-gray-200 rounded-xl "
 //                       src="https://images.unsplash.com/photo-1598929213452-52d72f63e307?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&h=720&q=80"
 //                       alt="Features Image"
 //                     />
@@ -313,7 +313,7 @@ export default Feature;
 //           </div>
 
 //           <div className="absolute inset-0 grid grid-cols-12 size-full">
-//             <div className="col-span-full lg:col-span-7 lg:col-start-6 bg-gray-100 w-full h-5/6 rounded-xl sm:h-3/4 lg:h-full dark:bg-neutral-800"></div>
+//             <div className="col-span-full lg:col-span-7 lg:col-start-6 bg-gray-100 w-full h-5/6 rounded-xl sm:h-3/4 lg:h-full "></div>
 //           </div>
 //         </div>
 //       </div>

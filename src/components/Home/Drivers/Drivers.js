@@ -8,10 +8,10 @@ const Drivers = ({ title, driverFeatures, description, image, imageAlt }) => {
           <div className="mt-5 sm:mt-10 lg:mt-0">
             <div className="space-y-6 sm:space-y-8">
               <div className="space-y-2 md:space-y-4">
-                <h2 className="font-bold text-3xl lg:text-4xl text-gray-800 dark:text-neutral-200">
+                <h2 className="font-bold text-3xl lg:text-4xl text-gray-800 ">
                   {title}
                 </h2>
-                <p className="text-gray-500 dark:text-neutral-500">
+                <p className="text-gray-500 ">
                   {description}
                 </p>
               </div>
@@ -19,7 +19,7 @@ const Drivers = ({ title, driverFeatures, description, image, imageAlt }) => {
               <ul className="space-y-2 sm:space-y-4">
                 {driverFeatures?.map((feature, index) => (
                   <li key={index} className="flex gap-x-3">
-                    <span className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                    <span className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 ">
                       <svg
                         className="shrink-0 size-3.5"
                         xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ const Drivers = ({ title, driverFeatures, description, image, imageAlt }) => {
                       </svg>
                     </span>
                     <div className="grow">
-                      <span className="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
+                      <span className="text-sm sm:text-base text-gray-500 ">
                         <span className="font-bold">{feature.featureName}</span>{" "}
                       </span>
                     </div>

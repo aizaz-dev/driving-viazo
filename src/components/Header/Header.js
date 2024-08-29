@@ -44,7 +44,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               type="button"
-              className="hs-collapse-toggle size-[38px] flex justify-center items-center text-sm font-semibold rounded-xl border border-gray-200 text-white  focus:outline-none  disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+              className="hs-collapse-toggle size-[38px] flex justify-center items-center text-sm font-semibold rounded-xl border border-gray-200 text-white  focus:outline-none  disabled:opacity-50 disabled:pointer-events-none "
               onClick={toggleNav}
               aria-expanded={isNavOpen}
               aria-controls="hs-navbar-hcail"

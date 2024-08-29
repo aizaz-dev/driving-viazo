@@ -9,15 +9,13 @@ const Hero = ({ title, description, trustedBy, heroImage, heroAlt }) => {
       <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
           <div className="lg:col-span-3">
-            <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl dark:text-white">
+            <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl ">
               {title}
             </h1>
-            <p className="mt-3 text-lg text-gray-800 dark:text-neutral-400">
-              {description}
-            </p>
+            <p className="mt-3 text-lg text-gray-800 ">{description}</p>
 
             <div className="mt-6 lg:mt-12">
-              <span className="text-xs font-medium text-gray-800 uppercase dark:text-neutral-200">
+              <span className="text-xs font-medium text-gray-800 uppercase ">
                 Descarga:
               </span>
 
