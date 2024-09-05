@@ -1,82 +1,55 @@
-"use client";
 import { urlFor } from "@/sanity/lib/client";
-import React, { useState } from "react";
+import Image from "next/image";
+import React from "react";
 
-const Features = ({ title, tabs }) => {
-  const [activeTab, setActiveTab] = useState(tabs[0]._key);
-
-  const handleTabClick = (tabId) => {
-    setActiveTab(tabId);
-  };
-
+const Features = ({ title, heroImage, description, tabs }) => {
   return (
-    <div className="py-10">
+    <div>
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-        <nav
-          className="max-w-6xl mx-auto flex flex-col sm:flex-row gap-y-px sm:gap-y-0 sm:gap-x-4"
-          aria-label="Tabs"
-          role="tablist"
-          aria-orientation="horizontal"
-        >
-          {tabs.map((tab) => {
-            const image = urlFor(tab.tabIcon).url();
-            const heroAlt = tab.tabIcon.alt;
-            return (
-              <button
-                key={tab._key}
-                type="button"
-                className={`hs-tab-active:bg-gray-100 hs-tab-active:hover:border-transparent w-full flex flex-col text-start hover:bg-gray-100 focus:outline-none focus:bg-gray-100 p-3 md:p-5 rounded-xl  ${
-                  activeTab === tab._key ? "active" : ""
-                }`}
-                id={`tabs-with-card-item-${tab._key}`}
-                aria-selected={activeTab === tab._key}
-                onClick={() => handleTabClick(tab._key)}
-                aria-controls={tab._key}
-                role="tab"
-              >
-                {/* {tab.icon} */}
-                <img src={image} alt={heroAlt} className="size-16" />
-                <span className="mt-5">
-                  <span className="hs-tab-active:text-blue-600 block font-semibold text-gray-800">
-                    {tab.tabTitle}
-                  </span>
-                  <span className="hidden lg:block mt-2 text-gray-800 ">
-                    {tab.tabDescription}
-                  </span>
-                </span>
-              </button>
-            );
-          })}
-        </nav>
+        <div className="">
+          <Image
+            className="w-full aspect-[2.4/1.2] object-cover rounded-xl"
+            src={heroImage}
+            alt={title}
+            width={987}
+            height={411}
+          />
+        </div>
 
-        <div className="mt-12 md:mt-16">
-          {tabs.map((tab) => {
-            const image = urlFor(tab.tabImage).url();
-            const heroAlt = tab.tabImage.alt;
-            return (
-              <div
-                key={tab._key}
-                id={tab._key}
-                role="tabpanel"
-                aria-labelledby={`tabs-with-card-item-${tab._key}`}
-                className={activeTab === tab._key ? "" : "hidden"}
-              >
-                <div className="max-w-[1140px] lg:pb-32 relative">
-                  <figure className="ms-auto me-20 relative z-[1] max-w-full w-[50rem] h-auto shadow-[0_2.75rem_3.5rem_-2rem_rgb(45_55_75_/_20%),_0_0_5rem_-2rem_rgb(45_55_75_/_15%)]  rounded-b-lg">
-                    <div className="relative flex items-center max-w-[50rem] bg-white border border-gray-200  ">
-                      <div className="w-full">
-                        <img
-                          className="rounded-t-lg"
-                          src={image}
-                          alt={heroAlt}
-                        />
-                      </div>
+        <div className="mt-5 lg:mt-16 grid lg:grid-cols-3 gap-8 lg:gap-12">
+          <div className="lg:col-span-1">
+            <h2 className="font-bold text-2xl md:text-3xl text-gray-800">
+              {title}
+            </h2>
+            <p className="mt-2 md:mt-4 text-gray-500">{description}</p>
+          </div>
+
+          <div className="lg:col-span-2">
+            <div className="grid sm:grid-cols-2 gap-8 md:gap-12">
+              {tabs.map((feature, index) => {
+                const image = urlFor(feature.image).url();
+                return (
+                  <div key={index} className="flex gap-x-5">
+                    <Image
+                      width={40}
+                      height={40}
+                      className="shrink-0 w-[40px]"
+                      src={image}
+                      alt=""
+                    />
+                    <div className="grow">
+                      <h3 className="text-lg font-semibold text-gray-800">
+                        {feature.title}
+                      </h3>
+                      <p className="mt-1 text-gray-600">
+                        {feature.description}
+                      </p>
                     </div>
-                  </figure>
-                </div>
-              </div>
-            );
-          })}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </div>

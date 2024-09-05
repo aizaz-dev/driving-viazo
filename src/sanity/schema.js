@@ -10,6 +10,7 @@ import faqSection from "./schemas/faqSection";
 import blogSection from "./schemas/blogSection";
 import blogPost from "./schemas/blogPost";
 import footer from "./schemas/footer";
+import driversFeatures from "./schemas/driversFeatures";
 
 export const schema = {
   types: [
@@ -18,6 +19,7 @@ export const schema = {
     drivers,
     page,
     driversHero,
+    driversFeatures,
     pricingPlan,
     pricingSection,
     faqItem,

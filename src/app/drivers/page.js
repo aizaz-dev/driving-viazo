@@ -15,6 +15,8 @@ const page = async () => {
   return (
     <div>
       {pageData.sections.map((section, index) => {
+        console.log("section", section);
+
         switch (section._type) {
           case "driversHero":
             return (
@@ -36,9 +38,15 @@ const page = async () => {
                 pricingPlans={section.plans}
               />
             );
-          case "features":
+          case "driversFeatures":
             return (
-              <Features key={index} title={section.title} tabs={section.tabs} />
+              <Features
+                key={index}
+                heroImage={urlFor(section.image).url()}
+                title={section.title}
+                description={section.description}
+                tabs={section.featuresList}
+              />
             );
           case "faqSection":
             return (

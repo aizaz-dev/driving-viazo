@@ -22,10 +22,11 @@ const page = {
         { type: "features" },
         { type: "drivers" },
         { type: "driversHero" },
+        { type: "driversFeatures" },
         { type: "pricingSection" },
         { type: "faqSection" },
         { type: "blogSection" },
-        {type:"footer"}
+        { type: "footer" },
       ],
     },
   ],

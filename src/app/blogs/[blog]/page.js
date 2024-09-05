@@ -6,7 +6,6 @@ import Link from "next/link";
 
 const page = async ({ params }) => {
   const { blog } = params;
-
   const blogPost = await client.fetch(
     `*[_type == "blogPost" && slug.current == $slug][0]{
       title,
@@ -120,14 +119,14 @@ const page = async ({ params }) => {
           </div>
 
           {/* Table of Contents */}
-          <div>
+          <div className="my-4">
             <h2 className="text-3xl font-bold">Contents</h2>
-            <ul>
+            <ul className=" list-outside my-2">
               {blogPost.body
                 .filter((block) => block._type === "section")
                 .map((section, index) => (
-                  <li key={index}>
-                    <a href={`#section-${index}`}>{section.title}</a>
+                  <li className="list-outside" key={index}>
+                    &#x2022; <a href={`#section-${index}`}>{section.title}</a>
                   </li>
                 ))}
             </ul>
@@ -135,19 +134,22 @@ const page = async ({ params }) => {
           {blogPost.body.map((section, index) => {
             if (section._type != "section") {
               return (
-                <div key={index}>
-                  <PortableText value={[section]} components={customComponents} />
+                <div className="" key={index}>
+                  <PortableText
+                    value={[section]}
+                    components={customComponents}
+                  />
                 </div>
               );
             }
           })}
 
           {/* Section Content */}
-          <div>
+          <div className="my-6">
             {blogPost.body
               .filter((block) => block._type === "section")
               .map((section, index) => (
-                <div key={index} id={`section-${index}`}>
+                <div className="my-2" key={index} id={`section-${index}`}>
                   <h1 className="text-3xl font-bold">{section.title}</h1>
                   <PortableText
                     value={section.content}

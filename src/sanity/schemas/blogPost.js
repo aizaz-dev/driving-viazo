@@ -4,7 +4,12 @@ const blogPost = {
   title: "Blog Post",
   type: "document",
   fields: [
-    { name: "title", title: "Title", type: "string" },
+    {
+      name: "title",
+      title: "Title",
+      type: "string",
+      validation: (Rule) => Rule.required().min(10).max(80),
+    },
     {
       name: "slug",
       title: "Slug",
@@ -13,8 +18,14 @@ const blogPost = {
         source: "title",
         maxLength: 96,
       },
+      validation: (Rule) => Rule.required(),
     },
-    { name: "description", title: "Description", type: "text" },
+    {
+      name: "description",
+      title: "Description",
+      type: "text",
+      validation: (Rule) => Rule.required().min(20).max(200),
+    },
     {
       name: "image",
       title: "Image",
@@ -25,17 +36,26 @@ const blogPost = {
           name: "alt",
           title: "Alt Text",
           type: "string",
+          validation: (Rule) => Rule.required(),
         },
       ],
     },
-    { name: "sponsored", title: "Sponsored", type: "boolean" },
+    {
+      name: "sponsored",
+      title: "Sponsored",
+      type: "boolean",
+    },
     {
       name: "linkText",
       title: "Link Text",
       type: "string",
       initialValue: "Read more",
     },
-    { name: "linkHref", title: "Link Href", type: "url" },
+    {
+      name: "linkHref",
+      title: "Link Href",
+      type: "url",
+    },
     {
       name: "body",
       title: "Body",
@@ -77,11 +97,6 @@ const blogPost = {
                         value: "big",
                         blockEditor: {
                           icon: () => "B",
-                          render: (props) => (
-                            <span style={{ fontSize: "1.5em" }}>
-                              {props.children}
-                            </span>
-                          ),
                         },
                       },
                       {
@@ -89,11 +104,6 @@ const blogPost = {
                         value: "small",
                         blockEditor: {
                           icon: () => "S",
-                          render: (props) => (
-                            <span style={{ fontSize: "0.75em" }}>
-                              {props.children}
-                            </span>
-                          ),
                         },
                       },
                     ],
@@ -107,6 +117,14 @@ const blogPost = {
                             name: "color",
                             title: "Color",
                             type: "string",
+                            options: {
+                              list: [
+                                { title: "Red", value: "red" },
+                                { title: "Green", value: "green" },
+                                { title: "Blue", value: "blue" },
+                                
+                              ],
+                            },
                           },
                         ],
                       },
